@@ -5,7 +5,7 @@ const server = http.createServer();
 server.on('request', (req,res) => {
     console.log(`Url: ${req.url}`);
     if(req.url === '/compute') {
-        const compute = fork('long-computer-sample-fork.js');
+        const compute = fork('compute.js');
         compute.send('start');
         compute.on('message', sum => {
             res.end(`Sum is ${sum}`);

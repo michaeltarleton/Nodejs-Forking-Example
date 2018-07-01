@@ -1,0 +1,107 @@
+Statistical profiling result from v8.log, (3184 ticks, 2993 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+      2    0.1%          /usr/lib/system/libsystem_c.dylib
+      1    0.0%          /usr/lib/libc++abi.dylib
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     10    0.3%    0.3%  KeyedStoreIC: A keyed store IC from the snapshot
+      3    0.1%    0.1%  LazyCompile: ~NativeModule.getCached bootstrap_node.js:550:36
+      2    0.1%    0.1%  Script: ~<anonymous> fs.js:1:11
+      2    0.1%    0.1%  Script: ~<anonymous> async_hooks.js:1:1
+      2    0.1%    0.1%  LazyCompile: ~runInThisContext bootstrap_node.js:499:28
+      1    0.0%    0.0%  Script: ~<anonymous> internal/streams/BufferList.js:1:11
+      1    0.0%    0.0%  Script: ~<anonymous> dns.js:1:11
+      1    0.0%    0.0%  LazyCompile: ~_addListener events.js:233:22
+      1    0.0%    0.0%  LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+      1    0.0%    0.0%  Builtin: RegExpPrototypeMatch
+      1    0.0%    0.0%  Builtin: InterpreterEntryTrampoline
+      1    0.0%    0.0%  Builtin: ArgumentsAdaptorTrampoline
+
+ [C++]:
+   ticks  total  nonlib   name
+    104    3.3%    3.3%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+     10    0.3%    0.3%  t node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      7    0.2%    0.2%  T v8::internal::Factory::NewSharedFunctionInfo(v8::internal::MaybeHandle<v8::internal::String>, v8::internal::MaybeHandle<v8::internal::Code>, bool, v8::internal::FunctionKind)
+      6    0.2%    0.2%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.1%    0.1%  T v8::internal::Parser::SkipFunction(v8::internal::AstRawString const*, v8::internal::FunctionKind, v8::internal::FunctionLiteral::FunctionType, v8::internal::DeclarationScope*, int*, v8::internal::ProducedPreParsedScopeData**, bool, bool, bool*)
+      2    0.1%    0.1%  T v8::internal::JSReceiver::SetProperties(v8::internal::HeapObject*)
+      2    0.1%    0.1%  T _vm_read
+      2    0.1%    0.1%  T _mach_vm_purgable_control
+      1    0.0%    0.0%  t void v8::internal::SlotSet::Insert<(v8::internal::AccessMode)0>(int)
+      1    0.0%    0.0%  t v8::internal::interpreter::RegisterTransferWriter::EmitStar(v8::internal::interpreter::Register)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseFormalParameterList(v8::internal::ParserFormalParameters*, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1    0.0%    0.0%  t v8::internal::JSObject::WriteToField(int, v8::internal::PropertyDetails, v8::internal::Object*)
+      1    0.0%    0.0%  t v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >::Accumulate(v8::internal::ExpressionClassifier<v8::internal::ParserTypes<v8::internal::Parser> >*, unsigned int, bool)
+      1    0.0%    0.0%  t __os_unfair_lock_unlock_slow
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayWriter::PatchJumpWith8BitOperand(unsigned long, int)
+      1    0.0%    0.0%  T v8::internal::String::CalculateLineEnds(v8::internal::Handle<v8::internal::String>, bool)
+      1    0.0%    0.0%  T v8::internal::Scanner::ScanIdentifierOrKeyword()
+      1    0.0%    0.0%  T v8::internal::Scanner::Scan()
+      1    0.0%    0.0%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.0%    0.0%  T v8::internal::Object::SetPropertyInternal(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::LanguageMode, v8::internal::Object::StoreFromKeyed, bool*)
+      1    0.0%    0.0%  T v8::internal::Logger::LogExistingFunction(v8::internal::Handle<v8::internal::SharedFunctionInfo>, v8::internal::Handle<v8::internal::AbstractCode>)
+      1    0.0%    0.0%  T v8::internal::LoadIC::Load(v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Name>)
+      1    0.0%    0.0%  T v8::internal::JSObject::MigrateToMap(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Map>, int)
+      1    0.0%    0.0%  T v8::internal::Heap::CreateFillerObjectAt(unsigned char*, int, v8::internal::ClearRecordedSlots)
+      1    0.0%    0.0%  T v8::internal::Heap::AllocateFixedArrayWithFiller(int, v8::internal::PretenureFlag, v8::internal::Object*)
+      1    0.0%    0.0%  T v8::internal::Deserializer::ReadObject(int, v8::internal::Object**)
+      1    0.0%    0.0%  T v8::internal::DependentCode::MarkCodeForDeoptimization(v8::internal::Isolate*, v8::internal::DependentCode::DependencyGroup)
+      1    0.0%    0.0%  T v8::internal::DeclarationScope::DeclarationScope(v8::internal::Zone*, v8::internal::Scope*, v8::internal::ScopeType, v8::internal::FunctionKind)
+      1    0.0%    0.0%  T v8::internal::AstRawString::AsArrayIndex(unsigned int*) const
+      1    0.0%    0.0%  T _os_unfair_lock_assert_not_owner
+      1    0.0%    0.0%  T _mach_vm_protect
+      1    0.0%    0.0%  T _mach_vm_map
+      1    0.0%    0.0%  T _host_create_mach_voucher
+      1    0.0%    0.0%  T __sseek
+
+ [Summary]:
+   ticks  total  nonlib   name
+     26    0.8%    0.8%  JavaScript
+    162    5.1%    5.1%  C++
+      6    0.2%    0.2%  GC
+      3    0.1%          Shared libraries
+   2993   94.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    119   79.3%    3.7%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     19   12.7%    0.6%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      3    2.0%    0.1%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.3%    0.1%  T v8::internal::Runtime_RegExpExec(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.3%    0.1%  T v8::internal::Runtime_DefineClass(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    1.3%    0.1%  T v8::internal::Runtime_CreateObjectLiteral(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.7%    0.0%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.7%    0.0%  T v8::internal::Runtime_NewObject(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    0.7%    0.0%  T v8::internal::Runtime_LoadGlobalIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   2993   94.0%  UNKNOWN
+
+    104    3.3%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+    103   99.0%    T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+    103  100.0%      LazyCompile: ~runInThisContext bootstrap_node.js:499:28
+    103  100.0%        LazyCompile: ~NativeModule.compile bootstrap_node.js:588:44
+    103  100.0%          LazyCompile: ~NativeModule.require bootstrap_node.js:520:34
+     24   23.3%            Script: ~<anonymous> internal/child_process.js:1:11
+     11   10.7%            Script: ~<anonymous> internal/loader/ModuleRequest.js:1:11
+     10    9.7%            Script: ~<anonymous> net.js:1:11
+      9    8.7%            Script: ~<anonymous> stream.js:1:11
+      9    8.7%            Script: ~<anonymous> child_process.js:1:11
+      7    6.8%            Script: ~<anonymous> _stream_readable.js:1:11
+      6    5.8%            Script: ~<anonymous> internal/trace_events_async_hooks.js:1:11
+      5    4.9%            Script: ~<anonymous> module.js:1:11
+      5    4.9%            LazyCompile: ~startup bootstrap_node.js:12:19
+      5    4.9%            LazyCompile: ~setup_performance internal/process.js:14:27
+      4    3.9%            Script: ~<anonymous> util.js:1:11
+      3    2.9%            Script: ~<anonymous> internal/loader/Loader.js:1:11
+      2    1.9%            LazyCompile: ~setupGlobalVariables bootstrap_node.js:255:32
+
