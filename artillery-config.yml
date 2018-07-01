@@ -1,0 +1,21 @@
+config:
+    target: "http://localhost:3000"
+    http:
+        timeout: 6000
+    phases:
+        - duration: 60 
+          arrivalRate: 10
+          rampTo: 50
+          name: "Warm up the application"
+        - duration: 60 
+          arrivalRate: 10
+          rampTo: 50
+          name: "Sustained max load"
+scenarios:
+    - flow:
+        - log: "Staring sample run"
+        - get:
+            url: "/compute"
+
+
+
