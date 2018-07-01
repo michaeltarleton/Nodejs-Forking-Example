@@ -1,0 +1,89 @@
+Statistical profiling result from v8.log, (6021 ticks, 5376 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+    546    9.1%    9.1%  LazyCompile: *longComputation /Users/michaeltarleton/Repos/Personal/Nodejs-Forking-Example/compute.js:1:87
+      2    0.0%    0.0%  Script: ~<anonymous> fs.js:1:11
+      1    0.0%    0.0%  Builtin: KeyedLoadIC_Megamorphic
+      1    0.0%    0.0%  Builtin: ArgumentsAdaptorTrampoline
+
+ [C++]:
+   ticks  total  nonlib   name
+     39    0.6%    0.6%  t node::(anonymous namespace)::ContextifyScript::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t v8::internal::Scavenger::ScavengeObject(v8::internal::HeapObject**, v8::internal::HeapObject*)
+      3    0.0%    0.0%  t node::cares_wrap::(anonymous namespace)::ChannelWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      3    0.0%    0.0%  t node::Binding(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t v8::internal::Heap::AllocateRaw(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment)
+      2    0.0%    0.0%  t node::LStat(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  t int v8::internal::SlotSet::Iterate<v8::internal::PageScavengingItem::Process(v8::internal::Scavenger*)::'lambda'(unsigned char*)>(v8::internal::PageScavengingItem::Process(v8::internal::Scavenger*)::'lambda'(unsigned char*), v8::internal::SlotSet::EmptyBucketMode)
+      2    0.0%    0.0%  t __os_unfair_lock_lock_slow
+      2    0.0%    0.0%  T v8::internal::StoreIC::UpdateCaches(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::Object::StoreFromKeyed, v8::internal::MaybeHandle<v8::internal::Object>)
+      2    0.0%    0.0%  T v8::internal::StoreIC::LookupForWrite(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::Object::StoreFromKeyed)
+      2    0.0%    0.0%  T v8::internal::Scanner::ScanIdentifierOrKeyword()
+      2    0.0%    0.0%  T v8::internal::Heap::AllocateFixedArrayWithFiller(int, v8::internal::PretenureFlag, v8::internal::Object*)
+      2    0.0%    0.0%  T node::TTYWrap::New(v8::FunctionCallbackInfo<v8::Value> const&)
+      2    0.0%    0.0%  T _vm_read
+      2    0.0%    0.0%  T _os_unfair_lock_assert_owner
+      1    0.0%    0.0%  t void v8::internal::BodyDescriptorBase::IterateBodyImpl<v8::internal::ObjectVisitor>(v8::internal::HeapObject*, int, int, v8::internal::ObjectVisitor*)
+      1    0.0%    0.0%  t void std::__1::__sort<bool (*&)(v8::internal::compiler::MoveOperands const*, v8::internal::compiler::MoveOperands const*), v8::internal::compiler::MoveOperands**>(v8::internal::compiler::MoveOperands**, v8::internal::compiler::MoveOperands**, bool (*&)(v8::internal::compiler::MoveOperands const*, v8::internal::compiler::MoveOperands const*))
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseStatementList(v8::internal::ZoneList<v8::internal::Statement*>*, int, bool, bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseObjectLiteral(bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseLeftHandSideExpression(bool*)
+      1    0.0%    0.0%  t v8::internal::ParserBase<v8::internal::Parser>::ParseAssignmentExpression(bool, bool*)
+      1    0.0%    0.0%  t v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::Resize(v8::base::DefaultAllocationPolicy)
+      1    0.0%    0.0%  t v8::base::TemplateHashMapEntry<void*, void*>* v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert<v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::base::DefaultAllocationPolicy)::'lambda'()>(void* const&, unsigned int, v8::base::TemplateHashMapImpl<void*, void*, v8::base::HashEqualityThenKeyMatcher<void*, bool (*)(void*, void*)>, v8::base::DefaultAllocationPolicy>::LookupOrInsert(void* const&, unsigned int, v8::base::DefaultAllocationPolicy)::'lambda'() const&, v8::base::DefaultAllocationPolicy)
+      1    0.0%    0.0%  t _szone_batch_free
+      1    0.0%    0.0%  t __platform_memmove$VARIANT$Base
+      1    0.0%    0.0%  t __os_unfair_lock_unlock_slow
+      1    0.0%    0.0%  t ___vfwscanf
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayWriter::EmitBytecode(v8::internal::interpreter::BytecodeNode const*)
+      1    0.0%    0.0%  T v8::internal::interpreter::BytecodeArrayBuilder::Bind(v8::internal::interpreter::BytecodeLabel*)
+      1    0.0%    0.0%  T v8::internal::SourcePositionTableBuilder::AddEntry(v8::internal::PositionTableEntry const&)
+      1    0.0%    0.0%  T v8::internal::Scope::ResolveTo(v8::internal::ParseInfo*, v8::internal::VariableProxy*, v8::internal::Variable*)
+      1    0.0%    0.0%  T v8::internal::Scanner::Next()
+      1    0.0%    0.0%  T v8::internal::JSReceiver::ValidateAndApplyPropertyDescriptor(v8::internal::Isolate*, v8::internal::LookupIterator*, bool, v8::internal::PropertyDescriptor*, v8::internal::PropertyDescriptor*, v8::internal::Object::ShouldThrow, v8::internal::Handle<v8::internal::Name>)
+      1    0.0%    0.0%  T v8::internal::JSObject::SetPrototype(v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>, bool, v8::internal::Object::ShouldThrow)
+      1    0.0%    0.0%  T v8::internal::Factory::NewCell(v8::internal::Handle<v8::internal::Object>)
+      1    0.0%    0.0%  T v8::internal::ExitFrame::ComputeCallerState(v8::internal::StackFrame::State*) const
+      1    0.0%    0.0%  T v8::internal::Deserializer::GetBackReferencedObject(int)
+      1    0.0%    0.0%  T v8::Object::DefineOwnProperty(v8::Local<v8::Context>, v8::Local<v8::Name>, v8::Local<v8::Value>, v8::PropertyAttribute)
+      1    0.0%    0.0%  T node::HandleWrap::Close(v8::FunctionCallbackInfo<v8::Value> const&)
+      1    0.0%    0.0%  T _mach_error_type
+
+ [Summary]:
+   ticks  total  nonlib   name
+    550    9.1%    9.1%  JavaScript
+     95    1.6%    1.6%  C++
+      9    0.1%    0.1%  GC
+      0    0.0%          Shared libraries
+   5376   89.3%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+     50   66.7%    0.8%  T v8::internal::Builtin_HandleApiCall(int, v8::internal::Object**, v8::internal::Isolate*)
+     13   17.3%    0.2%  T v8::internal::Runtime_CompileLazy(int, v8::internal::Object**, v8::internal::Isolate*)
+      6    8.0%    0.1%  T v8::internal::Runtime_KeyedStoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      2    2.7%    0.0%  T v8::internal::Runtime_StoreIC_Miss(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.3%    0.0%  T v8::internal::Runtime_MapGrow(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.3%    0.0%  T v8::internal::Runtime_InterpreterNewClosure(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.3%    0.0%  T v8::internal::Builtin_ObjectSetPrototypeOf(int, v8::internal::Object**, v8::internal::Isolate*)
+      1    1.3%    0.0%  T v8::internal::Builtin_ObjectDefineProperties(int, v8::internal::Object**, v8::internal::Isolate*)
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   5376   89.3%  UNKNOWN
+
+    546    9.1%  LazyCompile: *longComputation /Users/michaeltarleton/Repos/Personal/Nodejs-Forking-Example/compute.js:1:87
+    546  100.0%    LazyCompile: ~process.on /Users/michaeltarleton/Repos/Personal/Nodejs-Forking-Example/compute.js:9:23
+    546  100.0%      LazyCompile: ~emitTwo events.js:124:17
+    545   99.8%        LazyCompile: ~emit events.js:156:44
+    545  100.0%          LazyCompile: ~emit internal/child_process.js:771:16
+    545  100.0%            LazyCompile: ~_combinedTickCallback internal/process/next_tick.js:129:33
+
