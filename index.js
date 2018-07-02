@@ -11,7 +11,6 @@ const longComputation = () => {
 
 const server = http.createServer();
 server.on('request', (req,res) => {
-    console.log(`Url: ${req.url}`);
     if(req.url === '/compute') {
         const sum = longComputation();
         res.end(`Sum is ${sum}`);

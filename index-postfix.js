@@ -3,7 +3,6 @@ const http = require('http');
 const server = http.createServer();
 
 server.on('request', (req,res) => {
-    console.log(`Url: ${req.url}`);
     if(req.url === '/compute') {
         const compute = fork('compute.js');
         compute.send('start');
